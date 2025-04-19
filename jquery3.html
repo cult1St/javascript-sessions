@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!-- 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam praesentium tempore sed quos magnam, velit odio sint error autem iste, nihil saepe culpa excepturi deleniti? Blanditiis ratione esse sed saepe.</p> -->
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col m-1">
+                <h1>Hello World</h1>
+            </div>
+            <div class="col m-1">
+                <input type="text" name="input" id="mmm" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">Password</label>
+                <input disabled type="password" name="password" id="password" class="form-control m-1">
+                <button id="show_password" class="btn btn-warning">Show Password</button>
+                <button class="btn btn-outline-warning" id="show_disabled">Disabled</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("p").css({"background-color": "green", "color": "yellow"})
+
+
+            $("h1").css("background-color", "green")
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow")
+            })
+            $("#show_password").click(function(){
+                $("#password").attr("type", "text")
+               // $("#password").removeAttr("class");
+
+            })
+            $("#show_disabled").click(function(){
+                alert($("#password").prop("disabled"))
+                $("#password").prop("disabled", false)
+            })
+        })
+    </script>
+    
+</body>
+</html>

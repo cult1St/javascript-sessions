@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 4</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col  bg-primary">
+                <h2>Hello world</h2>
+                <button class="btn btn-dark"> class </button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+              <p>  it is a beautiful day in nigeria</p>
+                <img src="image3.png" alt="" class="img-fluid">
+                <br>
+                <button id="like_btn">Like</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+   <!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <ol id="list_items">
+                <li>Rice</li>
+                <li>Beans</li>
+
+            </ol>
+            <button id="add_elements" class="btn btn-primary">Add Element</button>
+        </div>
+        <div class="col-md-12">
+            <p id="ptag">Hello jupiter</p>
+        </div>
+    </div>
+   </div> -->
+
+
+   <div class="container">
+    <div class="row">
+        <h2>Users Registeration</h2>
+        <div class="col-md-6">
+            <button class="btn btn-primary" id="add_fields">Add More Fields</button>
+            <div  id="addresses" class="">
+                <div class="form-group" id="line_1">
+                    <label for="">Address Line 1</label>
+                    <input type="text" name="" id="" class="form-control">
+                </div>
+                <div class="form-group" id="line_2">
+                    <label for="">Address Line 2</label>
+                    <input type="text" name="" id="" class="form-control">
+                </div>
+            </div>
+            <a href="#" id="remove_link">Remove</a>
+            
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <a href="#" id="hide_me">Hide Me</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" id="fade_in">Fade In</button>
+            <button class="btn btn-warning" id="fade_out">Fade Out</button>
+            <button class="btn btn-secondary" id="fade_toggle">Fade Toggle</button>
+            <button class="btn btn-info" id="fade_to">Fade to</button>
+        </div>
+        <div class="col">
+            <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquam accusantium amet saepe voluptate cupiditate dolor repudiandae vero, quam, architecto, obcaecati itaque provident nobis. Esse consectetur voluptates nam nihil consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, magnam doloremque, id excepturi eos praesentium numquam iusto, a nihil iste eum! Quia est iste placeat quasi repellendus eum sapiente incidunt.</p>
+        </div>
+    </div>
+   </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var form_element = $("#addresses"),
+            number = 3;
+
+            $("#add_fields").click(function(){
+                form_element.append(' <div class="form-group" id="line_'+number+'"><label for="">Address Line '+number+'</label><input type="text" name="" id="" class="form-control"></div>');
+                number ++;
+            })
+            $("#remove_link").click(function(){
+                number--;
+                if(number == 2){
+                    number++;
+                    alert("Cannot delete the last two addresses")
+                    return;
+                }
+
+                $("#line_"+ number).remove()
+               
+            })
+
+
+           $("#fade_in").click(function(){
+            $("#lorem").fadeIn(500)
+           })
+           $("#fade_out").click(function(){
+            $("#lorem").fadeOut(1000)
+           })
+           $("#fade_toggle").click(function(){
+            $("#lorem").fadeToggle(2000)
+           })
+           $("#fade_to").click(function(){
+            $("#lorem").fadeTo(100, 0.5)
+           })
+
+
+
+            // $("button").click(function(){
+            //     // $(".col").addClass("bg-dark")
+            //     //$(".col").removeClass("bg-primary")
+            //     // var hasBgp = $(".col").hasClass("bg-primary");
+            //     // alert(hasBgp)
+            //     $(".col").toggleClass("bg-primary")
+            // })
+
+
+            // $("#like_btn").click(function(){
+            //     var has_like = $(this).hasClass("btn btn-primary");
+
+            //     $(this).toggleClass("btn btn-primary");
+
+            //     if(has_like){
+            //         $(this).text("Like")
+            //     }else{
+            //         $(this).text("Liked")
+            //     }
+
+            // })
+
+
+
+
+            // $("#add_elements").click(function(){
+            //     var food = prompt("Enter A Foodstuff To add");
+            //     if(food.length == 0){
+            //         food = "No Food";
+            //     }
+
+            //     // $("#list_items").append("<li>"+food+"</li>")
+            //     $("#list_items").before("<li>"+food+"</li>")
+            // })
+            // $("#ptag").click(function(){
+            //     $(this).empty()
+            //     $(this).remove()
+            // })
+
+
+            $("#hide_me").click(function(){
+                $(this).hide()
+            })
+        })
+    </script>
+</body>
+</html>

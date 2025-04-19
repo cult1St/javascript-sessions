@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<body>
+
+    <!-- <div class="container p-2" style="border: 1px solid red;">
+        <div class="row">
+            <div class="col">
+                <h2>The Youths of Nigeria Group</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et unde in minima distinctio. Mollitia debitis, quibusdam est in officia animi natus veniam tempore placeat consequatur aut quasi, harum distinctio?z</p>
+                <button class="btn btn-primary">Like</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>The BookWorms Page</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et unde in minima distinctio. Mollitia debitis, quibusdam est in officia animi natus veniam tempore placeat consequatur aut quasi, harum distinctio?z</p>
+                <button class="btn btn-primary">Like</button>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Nigeria @ 60, Write a comment</h3>
+                <textarea name="comment" id="comment" class="form-control"></textarea>
+            </div>
+            <div class="col-md-12">
+                <button id="comment_btn" class="btn btn-primary">Post</button>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Comments</h4>
+            <div class="col" id="comments"></div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        // $("button").click(function(){
+        //     $(this).html(" <i class='fa fa-thumbs-up'></i> Liked")
+        // })
+
+        $("#comment_btn").click(function(){
+            var comment = $("#comment").val();
+            $("#comments").html("1. "+ comment)
+        })
+    </script>
+    
+</body>
+</html>

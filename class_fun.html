@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" id="fav">Favourite Quote</button>
+                <button class="btn btn-danger" id="loop">Loop 10 times</button>
+                <input type="button" value="type button" class="btn btn-warning">
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fav").click(function(){
+                alert("Hello World");
+            })
+
+            $("#loop").click(function(){
+                for(i = 1; i<= 10; i++){
+                    alert("Number "+ i);
+                }
+            })
+
+
+            // $("input:button").click(function(){
+            //     alert("You Clicked an Input of type button")
+            // })
+            $("input[type=button]").click(function(){
+                alert("You Clicked an Input of type button")
+            })
+        })
+    </script>
+</body>
+</html>

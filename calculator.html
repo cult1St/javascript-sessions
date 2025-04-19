@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 card bg-warning ">
+                <div class="card-header">
+                    Calculator
+                </div>
+                <div class="card-body bg-light">
+                    <div class="mb-3">
+                        <label for="">Input 1</label>
+                        <input type="text" id="input1" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Input 2</label>
+                        <input type="text" id="input2" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        Answer : <span id="answer">0</span>
+                    </div>
+                    <div class="mb-3">
+                        <button onclick="add()" class="btn btn-primary">Add</button>
+                        <button onclick="subtract()" class="btn btn-secondary">Subtract</button>
+                        <button onclick="multiply()" class="btn btn-warning">Multiply</button>
+                        <button onclick="divide()" class="btn btn-outline-primary">Divide</button>
+                        <button onclick="modulus()" class="btn btn-outline-success">Modulus</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="calculator.js"></script>
+    
+</body>
+</html>

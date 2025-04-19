@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-6 mt-5">
+
+                <form action="#" class="form-control" method="post">
+                    <h2 class="text-warning">Register</h2>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="text" name="username" id="username" class="form-control">
+                            <label for="">Username</label>
+                        </div>
+                        <p class="text-danger" id="username_error"></p>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="text" name="password" id="password" class="form-control">
+                            <label for="">Password</label>
+                        </div>
+                        <p class="text-danger" id="password_error"></p>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="text" name="confirm_password" id="confirm_password" class="form-control">
+                            <label for="">Confirm Password</label>
+                        </div>
+                        <p class="text-danger" id="confirm_password_error"></p>
+                    </div>
+                    <div class="row">
+                        <button type="button" onclick="register_by_text()" class="btn btn-danger">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var username = document.getElementById('username');
+        var username_error = document.getElementById('username_error');
+        var password = document.getElementById('password');
+        var password_error = document.getElementById('password_error');
+        var confirm_password = document.getElementById('confirm_password');
+        var confirm_password_error = document.getElementById('confirm_password_error');
+
+        function register_by_alert(){
+            if(username.value.length < 1 || password.value.length == 0 || confirm_password.value.length == 0){
+                alert("All Fields Are Required");
+
+            }else if(password.value != confirm_password.value ){
+                alert("Password And password Confirmation Fields Must Be equal");
+            }else{
+                alert("Registeration Successfull")
+            }
+        }
+        function register_by_text(){
+            var valid = true;
+            if(username.value.length == 0){
+                username_error.innerText = "Username Field Is Required";
+                valid = false;
+            }
+            if(password.value.length == 0){
+                password_error.innerText = "Password Field Is Required";
+                valid = false;
+            }
+            if(confirm_password.value.length == 0){
+                confirm_password_error.innerText = "Confirm Password Field Is Required";
+                valid = false;
+            }
+            if(password.value != confirm_password.value){
+                confirm_password_error.innerText = "Password And password Confirmation Fields Must Be equal";
+                valid = false;
+            }
+
+            if(valid == true){
+                alert("Registration Successfull")
+                username_error.innerText = "";
+                password_error.innerText = "";
+                confirm_password_error.innerText = "";
+            }
+        }
+    </script>
+    
+</body>
+</html>

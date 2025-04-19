@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to jquery</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+
+    <!-- <p id="ptag">Hello from mars</p>
+    
+
+    <button id="btn_hello">Hello Click</button> -->
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form action="" class="form-control">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">When did 2023/2024 Isreal Hamas war start</label>
+                        </div>
+                        <div class="col-md-7">
+                            <select name="" class="form-select" id="">
+                                <option value="">Select An Option</option>
+                                <option value="">Yes</option>
+                                <option value="">No</option>
+                            </select>
+                           </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <label for="">When did 2023/2024 Isreal Hamas war start</label>
+                        </div>
+                        <div class="col-md-7">
+                            <select name="" class="form-select" id="">
+                                <option value="">Select An Option</option>
+                                <option value="">Yes</option>
+                                <option value="">No</option>
+                            </select>
+                           </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <label for="">When did 2023/2024 Isreal Hamas war start</label>
+                        </div>
+                       <div class="col-md-7">
+                        <select name="" class="form-select" id="">
+                            <option value="">Select An Option</option>
+                            <option value="">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                       </div>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn btn-warning">Next</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn_hello").click(function(){
+                alert("Hello Cloick")
+            })
+            $("#ptag").click(function(){
+                alert("I would be hidden now");
+                $(this).hide()
+            })
+            $("#ptag").hover(function(){
+                alert("You entered P tag");
+              
+            }, function(){
+                alert("You left P tag");
+              
+            })
+
+            $("select").hover(function(e){
+                alert("You Are being Watched");
+                e.preventDefault()
+            })
+            $("button").click(function(){
+                alert("You Are being Watched");
+            })
+        })
+    </script>
+
+</body>
+</html>

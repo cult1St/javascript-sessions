@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Day 2</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <label>Username</label>
+            <input type="text" name="tusername" id="username" class="form-control">
+        </div>
+        <button class="btn btn-danger">Show Username</button>
+    </div> -->
+
+
+    <p id="ptag">Hello shalli</p>
+</div>
+    <script src="jquery.js"></script>
+
+    <script>
+        // var content = $("#cont").text();
+        // console.log(content);
+        var newfunc = function(){
+            var input = $("#username").val();
+            alert(input);
+        }
+    
+        $("button").click(newfunc);
+
+       
+
+
+        function submit(){
+            var username = $("#username").val();
+            var password = $("#password").val();
+            if(username.length == 0){
+                alert("Username is empty")
+            }
+            if(password.length == 0){
+                alert("Password is empty")
+            }
+        }
+        $("#ptag").click(function(){
+            $(this).html("Greet me from mars")
+        })
+    </script>
+    
+</body>
+</html>

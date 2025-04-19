@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 5</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+    <!-- <div class="container">
+        <div class="row justify-content-center px-2" style="height: 100px;">
+            <div class="col-md-4 bg-danger" id="div1"></div>
+            <div class="col-md-4 bg-primary" id="div2"></div>
+            <div class="col-md-4 bg-warning " id="div3"></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <p id="ptag">Hello World</p>
+                <p >Hello World <span >Greet me from mars</span></p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col" id="children_div">
+                <p id="ptag1">Hello World 1</p>
+                <p id="ptag2">Hello World <span >Greet me from mars</span></p>
+                <p id="ptag3">Hello World</p>
+                <p id="ptag4">Hello World <span >Greet me from Mecury</span></p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col" >
+               
+                <button>(<span>0</span>) Likes</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quaerat eaque sit earum veritatis consequuntur in repudiandae impedit dolore vero amet consequatur reiciendis incidunt, cum debitis! Nulla quia animi possimus?</p>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary">Like</button>
+                        <span>0</span>
+                        <span>Likes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quaerat eaque sit earum veritatis consequuntur in repudiandae impedit dolore vero amet consequatur reiciendis incidunt, cum debitis! Nulla quia animi possimus?</p>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary">Like</button>
+                        <span>0</span>
+                        <span>Likes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".col-md-4").click(function(){
+                $(this).addClass("animate__animated  animate__bounce");
+                setTimeout(function(){
+                    $(this).removeClass("animate__animated  animate__bounce");
+                }, 3000)
+            })
+
+            $("#ptag").click(function(){
+                $(this).text("You Clicked Me").css("color", "blue").addClass("bg-warning");
+            })
+
+            $("span").click(function(){
+                $(this).parentsUntil("div").css("color", "green")
+            })
+
+         //   $("#children_div").children().last().css("color", "yellow")
+
+                // $("p").find("span").css("color", "red")
+
+
+                // $("#ptag2").siblings().css("color", "orange")
+              //  $("#ptag2").next().css("color", "orange")
+            //  $("#ptag2").prev().css("color", "orange")
+            $("#ptag2").nextAll().css("color", "orange")
+
+            var likes = 0;
+            // $("button").click(function(){
+            //     likes++;
+            //     $(this).addClass("btn btn-primary text-light").find("span").text(likes);
+            // })
+
+            $("button").click(function(){
+                likes++;
+                $(this).next().text(likes);
+            })
+        })
+    </script>
+
+</body>
+</html>

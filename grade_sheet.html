@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Sheet</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 mt-5 card">
+                <div class="card-header">
+                    <h3 class="text-warning">Grade Sheet</h3>
+                </div>
+               <div class="card-body">
+                    <table class="table table-primary table-bordered table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Scores</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td><input type="number" name="maths_score" oninput="calculate_grade(this.value, 'maths_grade')" class="form-control" id="maths_score"></td>
+                                <td><input type="text" disabled name="maths_grade" class="form-control" id="maths_grade"></td>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td><input type="number" name="english_score" oninput="calculate_grade(this.value, 'english_grade')" class="form-control" id="english_score"></td>
+                                <td><input type="text" disabled name="english_grade" class="form-control" id="english_grade"></td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry</td>
+                                <td><input type="number" name="chemistry_score" oninput="calculate_grade(this.value, 'chemistry_grade')" class="form-control" id="chemistry_score"></td>
+                                <td><input type="text" disabled name="chemistry_grade" class="form-control" id="chemistry_grade"></td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td><input type="number" name="physics_score" oninput="calculate_grade(this.value, 'physics_grade')" class="form-control" id="physics_score"></td>
+                                <td><input type="text" disabled name="physics_grade" class="form-control" id="physics_grade"></td>
+                            </tr>
+                            <tr>
+                                <td>Biology</td>
+                                <td><input type="number" name="biology_score" oninput="calculate_grade(this.value, 'biology_grade')" class="form-control" id="biology_score"></td>
+                                <td><input type="text" disabled name="biology_grade" class="form-control" id="biology_grade"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+               </div>
+               <div class="card-footer">
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <button onclick="calculate_result()" class="btn btn-warning">Get Result</button>
+                    </div>
+
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <p>Total</p>
+                    </div>
+                    <div class="col-md-8">
+                        <p id="total_scores"></p>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <p>Average</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="average_score"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="average_grade"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Remarks
+                    </div>
+                    <div class="col-md-4">
+                        <p id="remark_text"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="" style="display: none; width: 200px;" id="remark_image" alt="">
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="grade_sheet.js"></script>
+</body>
+</html>

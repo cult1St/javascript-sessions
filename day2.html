@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript day 2. event handling</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        .row div{
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body >
+    <!-- <h1>Hello World</h1> -->
+   
+    <!-- <button onclick="
+        var prompt_var = prompt('Enter a number');
+        alert('Number '+ prompt_var + ' is available');
+    ">Start Now </button>   -->
+    <!-- 
+        <input value="" type="text" id="input1" placeholder="Enter a number" />
+        <button id="btn1" onclick="
+            var input1 = document.getElementById('input1').value;
+            alert('Number '+ input1 + ' is available');
+        ">Click Me</button> -->
+
+        <!-- <p>Hello mars from shalli</p>
+        <p id="red_p" style="color: red;" >Greet everyone from jupitetr</p>
+        <button onclick="
+            var redP = document.getElementById('red_p').innerHTML;
+            alert(redP);
+        " >Alert contents of red p</button>
+
+
+        <label for="">Describe Yourself in four lines</label>
+        <textarea name="describe" id="describe"></textarea>
+        <button onclick="
+            var describe = document.getElementById('describe').value;
+            alert(describe);
+        ">Get Data</button> 
+        
+    -->
+
+
+    <!-- <input type="text" id="username" placeholder="Enter Your Username" />
+    <p id="para1">Hello Jupiter</p>
+    <button onclick="
+         document.getElementById('password').type = 'text';
+
+    ">change to red</button> -->
+
+
+
+    <!-- <img src="new2.jpg" alt=" new image 2" id="image">
+    <button onclick="
+    var width = document.getElementById('image').width;
+    var height =  document.getElementById('image').height;
+    alert('The Dimension of your image is '+ width +' X '+ height);
+   
+    " >Check Dimension</button> -->
+    <!-- <img src="new2.jpg" alt=" new image 2" id="image">
+    <button onclick="
+       document.getElementById('image').width = 100;
+    " >Reduce</button>
+    <button onclick="
+    document.getElementById('image').width = 500;
+ " >Increase</button> -->
+
+<!-- 
+ <div class="container border-primary p-3">
+    <div class="row">
+        <div class="col">
+            <h1>Login Here</h1>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="">Username</label>
+
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="username" id="username" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="">Password</label>
+
+                </div>
+                <div class="col-md-7">
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <button onclick="
+                        document.getElementById('password').type = 'text';
+                        " class="btn btn-info">Show</button>
+                        <button onclick="
+                        document.getElementById('password').type = 'password';
+                        " class="btn btn-info">Hide</button>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+ </div> -->
+
+
+ <div class="container">
+    <div class="row">
+        <div id="div1" style="background-color: aliceblue;" class="col-md-3">
+
+        </div>
+        <div id="div2" style="color: green;" class="col-md-3">
+           <video  id="video" src="test.mp4"></video>
+        </div>
+        <div id="div3" style="border: 1px solid blue;" class="col-md-3">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- <button onclick="
+                document.getElementById('div1').style = 'background-color: red';
+                " class="btn btn-dark">change div 1 background-color</button>
+                 <button onclick="
+                 document.getElementById('div3').style.border = '2px solid green';
+                 
+                 " class="btn btn-dark">change div 3 border color</button> -->
+                 <button onclick="
+                    document.getElementById('video').play();
+                 " class="btn btn-danger">Play Video</button>
+        </div>
+    </div>
+ </div>
+   
+    
+</body>
+</html>

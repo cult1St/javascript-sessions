@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions day 2</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button onclick="add_like()" class="btn btn-primary">
+                    <i class="fa fa-thumbs-up"></i>
+                    <span id="like_text"> Like</span>
+                </button>    
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        var likes = 0;
+        var like_text = document.getElementById("like_text");
+
+        function add_like(){
+            likes = likes + 1;
+            if(likes < 2){
+                like_text.innerText = likes + ' Like';
+            }else{
+                like_text.innerText = likes + ' Likes';
+            }
+        }
+
+        
+
+        function introduction(user, place, age){
+          
+            alert("Welcome " + user+ " You Live in "+ place + " And You Are "+ age +" Years Old");
+        }
+
+        // var name = prompt("What Is Your name");
+        // var place = prompt("Where Do You Live ?");
+        // var age = prompt("How old are You");
+
+       // introduction(name, place, age);
+
+        function get_product(gender){
+            gender = gender.toLowerCase();
+            if(gender == "male"){
+                alert("Phones are available");
+            }else if(gender == "female"){
+                alert("Shoue and bage are available")
+            }else{
+                alert("No Product found")
+            }
+        }
+       
+
+        
+
+        function allow_guest(gender, age){
+            if(gender.toLowerCase() == 'female' && age >= 65){
+                alert("You are allowed");
+            }else if( gender.toLowerCase() == 'male' && age >= 70){
+                alert("You Are Allowed");
+            }else{
+                alert("You Are Not Allowed");
+            }
+        }
+        
+        //allow_guest("male", 48)
+
+
+        function check_score (score = 10){
+            alert(score);
+        }
+        check_score()
+    </script>
+</body>
+</html>
