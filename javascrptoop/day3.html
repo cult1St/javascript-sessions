@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        let cars = {
+            small: "Corolla",
+            jeep: "Highlander"
+        }
+
+        let car = {
+            name: "Porsche",
+            model: 2024,
+            start: function(){
+                alert( "Car has started")
+            }
+        }
+        
+
+        // let person = {
+        //     fullname : "Momodu Wealth",
+        //     email: "info@momoduwealth.com.ng",
+        //     phone: "09078177518",
+        //     greet: function(){
+        //         console.log("Hello, Good Day")
+        //     },
+        //     topics: '',
+        //   bless: (name) => {
+        //     alert(`All is well with ${name}`)
+        //   },
+        //   project : () => {
+        //     return `A Platform to connect freelancers using ${this.fullname}`; 
+        //   }
+
+        // }
+        // console.log(person.fullname)
+
+        // person.fullname = "Philips";
+        // console.log(person.fullname)
+        // var ke = "age_prop";
+
+        // person[ke] = 43;
+        // console.log(person)
+
+
+        // var key = prompt("Enter Your Object Key");
+        // var value = prompt("Enter Your Object Value");
+        // person[key] = value;
+
+        // console.log(person);
+
+        //person.bless('Wealth')
+        // var topic = prompt("Enter your favourite topics");
+        // console.log(person.project())
+
+
+
+        // var person = {
+        //     name: "Michael",
+        //     age: 30,
+        //     gender: "Male"
+        // }
+
+        // var {name, age, gender} = person;
+        // console.log(gender)
+        // var presidents = ["Goodluck", "Buhari", "Tinubu"];
+        // var [,f_name,] = presidents;
+        // console.log(f_name)
+
+
+        var wealth = "Itel";
+        var james = "Iphone";
+        [wealth, james] = [james, wealth]
+        console.log(wealth)
+
+        const numbers = [12, 13, 14];
+
+        const sum = ([a, b, c]) => {
+            console.log(a + b + c);
+        }
+        sum(numbers)
+
+        const motors = [
+            {name: "Bicycle", price: 14000},
+            {name: "Car", price: 140000},
+            {name: "Truck", price: 2000000}
+        ]
+
+        var [,second_car,] = motors;
+        console.log(second_car);
+
+
+        const Book = {
+            title: "Things Fall Apart",
+            publisher: "Anthon Books",
+            publish_year: 2000,
+            author: "Chinua Achebe",
+            summary: () => {
+                return "Okonkwo was a very traditional man";
+            }
+        }
+    </script>
+    
+</body>
+</html>

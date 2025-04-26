@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class Car {
+            constructor(){
+                console.info("Car is Active")
+            }
+            start(){
+                console.log("car has Started")
+            }
+        }
+        // var car = new Car;
+        // car.start();
+
+        class Rectangle{
+            constructor(w, h){
+                this.width = w;
+                this.height = h;
+            }
+            area(){
+                return Number(this.width) * Number(this.height);
+            }
+            get get_width(){
+                return this.width;
+            }
+        }
+        var rectangle = new Rectangle(12, 15);
+        console.log(rectangle.area(), rectangle.get_width)
+
+
+        class User{
+            constructor(name, email, phone){
+                this.name = name;
+                this.email = email;
+                this.phone = phone;
+            }
+            signup(){
+                console.log("User Signed Up successfully")
+            }
+        }
+
+        class Premium_user extends User{
+            place_order(){
+                console.log("user placed orders")
+            }
+            #password(){
+                console.log("1234")
+            }
+        }
+        var user = new Premium_user()
+       
+
+        class Myphone {
+            static unlock(){
+                console.log("Phone Unlocked by me")
+            }
+        }
+
+        Myphone.unlock()
+
+
+
+        var today = new Date();
+        console.log(today.toDateString())
+    </script>
+
+
+</body>
+</html>

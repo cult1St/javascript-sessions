@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP day 1</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button id="like_btn" class="btn btn-primary"><span id="likes"></span> Likes</button>
+                <p>Time = <span id="time"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        var like_btn = document.getElementById("like_btn"),
+        likes = 0,
+        like_text = document.getElementById("likes");
+
+        // like_btn.addEventListener('click', function(){
+        //     likes++;
+        //     like_text.innerText = likes;
+        // })
+
+        like_btn.onclick = function(){
+            likes++;
+            like_text.innerText = likes;
+        }
+
+        
+
+        // const name = "Philip";
+        
+
+        let time = 0;
+        // setInterval(function(){
+        //     time++
+        //     console.log((time) + " Every 5 seconds")
+        // }, 5000);
+
+        setInterval(function(){
+           var time_span = document.getElementById("time");
+           var time = new Date().toLocaleTimeString();
+           time_span.innerText = time;
+        }, 1000);
+        
+        // setTimeout(function(){
+        //     console.log(8 +" Seconds reached")
+        // }, 8000)
+        setTimeout(() => {
+            console.log(8 +" Seconds reached") 
+        }, 8000);
+        //var add = (a, b) => a + b;
+        var add = (a, b) => {
+            return a + b;
+        }
+
+        console.log(add(10, 12))
+
+
+
+        var counter = 0;
+        // function changelike(){
+        //     counter = counter + 1 ;
+        //     document.getElementById('btnlike').innerHTML =    	counter + ' Like';
+        // }
+
+        const changelike = () => {
+            counter = counter + 1;
+            document.getElementById('btnlike').innerHTML = counter + " likes"
+        }
+        let myname ="Ola Johnson";
+
+        console.log(`The name is ${myname} I am doing well`)
+    </script>
+    
+</body>
+</html>

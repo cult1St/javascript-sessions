@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row justify-content-center p-4">
+            <div class="col-md-7">
+                <div class="alert-div alert alert-danger m-2 p-5" style="display: none;">
+                    Please Gmail and Yahoo mails are not allowed
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <button id="submit_btn" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let email_input = document.querySelector("#email"),
+         alert_div = document.querySelector(".alert-div"),
+         submit_btn = document.querySelector("#submit_btn");
+
+        submit_btn.addEventListener('click', () => {
+            //get the email value
+            var email_value = email_input.value;
+            //check for @gmail
+            var exploded = email_value.split("@");
+            if(exploded[1] == "gmail.com" || exploded[1] == "yahoo.com"){
+                alert_div.style.display = "block";
+            }else{
+                alert_div.style.display = "none";
+                alert("Registeration Successful")
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
